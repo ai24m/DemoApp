@@ -10,7 +10,7 @@ namespace DemoApp.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        [MaxLength(100)]
+        [MaxLength(1000)]
         public string Content { get; set; }
         public int Searched { get; set; }
     }
