@@ -58,7 +58,7 @@ namespace DemoApp.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateWord (int id, WordUpdateDto updated)
+        public ActionResult UpdateWord (int id, [FromBody] WordUpdateDto updated)
         {
             var word = _wordRepo.GetWordById(id);
             if (word == null)
