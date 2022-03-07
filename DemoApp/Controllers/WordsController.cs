@@ -45,7 +45,7 @@ namespace DemoApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult <WordReadDto> CreateWord (WordCreateDto created)
+        public ActionResult <WordReadDto> CreateWord ([FromBody] WordCreateDto created)
         {
             var word = _mapper.Map<Word>(created); 
             _wordRepo.CreateWord(word);

@@ -28,7 +28,7 @@ namespace DemoApp.Migrations
                     b.Property<string>("Content")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(1000)");
 
                     b.Property<int>("Searched")
                         .HasColumnType("int");
