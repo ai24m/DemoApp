@@ -1,0 +1,68 @@
+<div class="splash-container" *ngIf="!showResults">
+    <div class="splash">
+        <h1 class="splash-head">Search . . . </h1>
+        <p class="splash-subhead">
+            Enter a sentence .<br>
+            Enter a word to search .<br>
+        </p>
+        <p class="splash-subhead">
+        <form [formGroup]="searchForm" (submit)="submit(search, sentence); showResults = !showResults">
+            <!-- Enter Sentence -->
+            <div class="form-group">
+                <label>Enter Sentence</label>
+                <input type="text" class="form-control" formControlName="sentenceInput" [(ngModel)]="sentence.content"
+                    required />
+                <div *ngIf="searchForm.controls?.['sentenceInput']?.invalid" style="color: #6A5ACD; font-weight: bold;">
+                    <!-- Error handling -->
+                    <div *ngIf="searchForm.controls?.['sentenceInput']?.errors?.['required']">Sentence is required</div>
+                    <div *ngIf="searchForm.controls?.['sentenceInput']?.errors?.['maxlength']">Max character 1000
+                        exceeded</div>
+                </div>
+            </div>
+            <!-- Enter Word  -->
+            <div class="form-group">
+                <label>Enter Word</label>
+                <input type="text" class="form-control" formControlName="searchInput" [(ngModel)]="search.content"
+                    id="searchInput" required />
+                <div *ngIf="searchForm.controls?.['searchInput']?.invalid" style="color: #6A5ACD; font-weight: bold;">
+                    <!-- Error handling -->
+                    <div *ngIf="searchForm.controls?.['searchInput']?.errors?.['required']">Word is required
+                    </div>
+                    <div *ngIf="searchForm.controls?.['searchInput']?.errors?.['maxlength']">Max character 1000 exceeded
+                    </div>
+                </div>
+            </div>
+            <button id="search" [disabled]="searchForm.invalid" class="pure-button pure-button-primary">SUBMIT</button>
+        </form>
+    </div>
+</div>
+
+<div class="splash-container" *ngIf="showResults">
+    <div class="splash">
+        <h1 class="splash-head">Results . . . </h1>
+        <label>Sentence: </label>
+        <pre>{{passSentence.content}}</pre>
+        <label>Searched: </label>
+        <pre>{{passSearch.content}}</pre>
+        <!-- Result For with Radio Buttons -->
+        <form [formGroup]="resultsForm" class="checkboxes" (submit)="update()" novalidate>
+            <div>
+                <label id="radio-group-label"> Filters:</label>
+                <mat-radio-group class="radio-group" formControlName="filter">
+                    <mat-radio-button class="radio-button" *ngFor="let ty of types" [value]="ty">
+                        {{ty}}
+                    </mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <!-- Occurrences printed after filter container -->
+            <label>Occurences: </label>
+            <ng-container [ngSwitch]="getByFilter()">
+                <pre *ngSwitchCase="'None'">{{passSentence | filter: false: false: passSearch}}</pre>
+                <pre *ngSwitchCase="'Case Sensitive'">{{passSentence | filter: true: false: passSearch}}</pre>
+                <pre *ngSwitchCase="'Full Word'">{{passSentence | filter: false: true: passSearch}}</pre>
+                <pre *ngSwitchCase="'All'">{{passSentence | filter: true: true: passSearch}}</pre>
+            </ng-container>
+        </form>
+        <button id="search" class="pure-button pure-button-primary" (click)="showResults = !showResults">Back</button>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+.checkboxes {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+input:invalid {
+    border: 2px red; 
+}
+
+#checkboxlabel {
+    margin-left: 3%;
+}
+
+#search {
+    float: right; 
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+  
+  .radio-button {
+    margin: 5px;
+  }
+  
