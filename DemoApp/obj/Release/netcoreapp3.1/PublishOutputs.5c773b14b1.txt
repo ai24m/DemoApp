@@ -2,10 +2,10 @@ C:\Users\powel\source\repos\DemoApp\DemoApp\obj\Release\netcoreapp3.1\PubTmp\Out
 C:\Users\powel\source\repos\DemoApp\DemoApp\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\3rdpartylicenses.txt
 C:\Users\powel\source\repos\DemoApp\DemoApp\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\favicon.ico
 C:\Users\powel\source\repos\DemoApp\DemoApp\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\index.html
-C:\Users\powel\source\repos\DemoApp\DemoApp\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\main.7df0ae439bf72671.js
+C:\Users\powel\source\repos\DemoApp\DemoApp\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\main.5b6a21b63121bec6.js
 C:\Users\powel\source\repos\DemoApp\DemoApp\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\polyfills.6f022b28fe901763.js
 C:\Users\powel\source\repos\DemoApp\DemoApp\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\runtime.5b3d2c504ba08018.js
-C:\Users\powel\source\repos\DemoApp\DemoApp\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\styles.40f3a0fa07c0bcaf.css
+C:\Users\powel\source\repos\DemoApp\DemoApp\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\styles.79d0f11cd2f09902.css
 C:\Users\powel\source\repos\DemoApp\DemoApp\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
 C:\Users\powel\source\repos\DemoApp\DemoApp\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
 C:\Users\powel\source\repos\DemoApp\DemoApp\obj\Release\netcoreapp3.1\PubTmp\Out\DemoApp.dll
